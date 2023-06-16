@@ -23,6 +23,8 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
+    - name: file list
+      run: ls -al
     - name: Docker build
       run: |
         docker login -u ${{ secrets.USERNAME }} -p ${{ secrets.PASSWORD }}
